@@ -1,0 +1,14 @@
+{
+  "name": "oynb-tech-test",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "bootstrap": "yarn install && yarn --cwd packages/server install && yarn --cwd packages/frontend install",
+    "watch": "concurrently 'yarn --cwd packages/frontend run watch' 'yarn --cwd packages/server run watch'",
+    "test": "yarn --cwd packages/frontend test && yarn --cwd packages/frontend test"
+  },
+  "devDependencies": {
+    "concurrently": "^5"
+  }
+}
